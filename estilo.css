@@ -1,0 +1,32 @@
+#azultext {
+    color: blue;
+}
+
+#yellowtext {
+    color: yellow;
+}
+
+#redtext {
+    color: red;
+}
+
+#greentext {
+    color: green;
+}
+
+.tm_img {
+    width: 500px;
+}
+
+#blacktext {
+    color: black;
+    font-style: oblique;
+}
+
+.mapa {
+    background-image: url(mapa.JPG);
+}
+
+#fundo {
+    background-image: url(FUNDO.jpg);
+}
