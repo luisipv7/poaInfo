@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="pt-br">
 
+<script>
+
+    var conta=0;
+    
+    function mais()
+    {
+
+        conta++;
+        
+        document.getElementById("teste").innerHTML = conta;
+    }
+
+
+
+</script>
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,6 +88,11 @@
             </a>
         </div>
 
+        <div id="teste">
+
+            <p> ola</p>
+
+        </div>
 
         <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -84,21 +106,22 @@
                     <img class="rounded-circle" src="buraco.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>Buracos</h2>
                     <p>Clique no botão abaixo para preencher o formúlario informado onde o evento mencionado acima ocorreu ou localiza-se.</p>
-                    <p><a class="btn btn-secondary" href="cadastro.html" role="button">Clique aqui &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="cadastroaburaco.php" value="1"role="button">Clique aqui &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="acidente.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>Acidentes</h2>
                     <p>Clicando no botão abaixo você irá para uma tela para preenchimento da localização onde ocorreu o evento mencionado acima.</p>
-                    <p><a class="btn btn-secondary" href="cadastro.html" role="button">Informar &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="cadastroacidente.php"value="2" onclick="mais();" role="button">Informar &raquo;</a></p>
+                    
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="assalto.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>Assalto</h2>
                     <p>Informe onde ocorreu clicando no botão abaixo.</p>
-                    <p><a class="btn btn-secondary" href="cadastro.html" role="button">Clique aqui &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="cadastroassalto.php" value="3" role="button">Clique aqui &raquo;</a></p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -107,9 +130,12 @@
                     <img class="rounded-circle" src="alagado.jpg" alt="Generic placeholder image" width="140" height="140">
                     <h2>Alagamentos</h2>
                     <p>Informe clicando no botão abaixo onde há um alagamento ou onde demonstra um vazamento.</p>
-                    <p><a class="btn btn-secondary" href="cadastro.html" role="button">Informar &raquo;</a></p>
+                   <p><a class="btn btn-secondary" href="cadastroalagamento.php" value="4" role="button">Informar &raquo;</a></p>
+                    <!-- <form action="cadastroalagamento.php" method="POST"><input type="submit" value="Informar" class="btn btn-secondary" name="button"></form>-->
                 </div>
                 <!-- /.col-lg-4 -->
+
+                
             </div>
             <!-- /.row -->
 
@@ -123,20 +149,12 @@
                     <p class="lead">Nesta área você terá acesso ao eventos já cadastrados em nosso sitema. Repare que exitem 4 marcadores de cores diferentes sendo elas:<br>
                         <p id="azultext">Para alagamentos.</p><br>
                         <p id="yellowtext">Para buracos</p><br>
-                        <p id="redtext">Para assaltos</p><br>
+                        <p id="redtext" >Para assaltos</p><br>
                         <p id="greentext">Para acidentes</p>
                     </p>
                 </div>
                 <div class="col-md-5">
-                   
-
-                    <a href="https://drive.google.com/open?id=19bzqc8B5PHvR0gGDdrDM9Vi9VMA-v5Ed&usp=sharingl"><img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="mapa.JPG" data-holder-rendered="true"></a>   
-
-
-
-
-
-
+                   <a href="mapa.php"><img class="tm_img" src="mapa.JPG"></a>
                 </div>
             </div>
             

@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -29,17 +34,17 @@
 
         </nav>
     </header>
-    <form class="form-signin" action="index.html" method="POST">
+    <form class="form-signin" action="cadastra.php"method="POST">
         <!--<img class="mb-4" src="" href="" alt="" width="72" height="72">-->
         <h1 class="h3 mb-3 font-weight-normal" id="blacktext">Insira o endereço:</h1>
         <label for="input" class="sr-only"></label>
-        <input type="text" id="autocomplete" onFocus="geolocate()" name="evento" class="form-control" placeholder="Rua./AV. João das Neves" required >
+        <input type="text" id="autocomplete" onFocus="geolocate()" name="enderecoassalto" class="form-control" placeholder="Rua./AV. João das Neves" required >
         <div class="checkbox mb-3">
             <label>
          
         </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" onclick="alert('Enviado')" type="submit">Enviar</button>
+        <button class="btn btn-lg btn-primary btn-block" onclick="alert('Enviado')"  type="submit">Enviar</button>
         <p class="mt-5 mb-3 text-muted"></p>
     </form>
 
@@ -122,3 +127,4 @@
 </body>
 
 </html>
+
