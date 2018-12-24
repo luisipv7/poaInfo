@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 include 'conecta.php';
 
 $valor = $_POST['enderecoassalto'];
@@ -11,6 +12,7 @@ $valor3 = $_POST['enderecoaacidente'];
 
 $valor4 = $_POST['enderecoburaco'];
 
+
 if($valor){
 $my_Insert_Statement = $conn->prepare("INSERT INTO enderecoassalto (endereco) VALUES (:endereco )");
 
@@ -18,6 +20,7 @@ $my_Insert_Statement->bindParam(':endereco', $valor);
 
 if ($my_Insert_Statement->execute()) {
     echo "Cadastrado com sucesso.";
+    $contaAcidente++;
     header('location: index.html');
   } else {
     echo "Não foi possivel";
@@ -32,6 +35,7 @@ if($valor2){
     
     if ($my_Insert_Statement->execute()) {
         echo "Cadastrado com sucesso.";
+        $contaAlaga++;
         header('location: index.html');
       } else {
         echo "Não foi possivel";
@@ -46,7 +50,7 @@ if($valor2){
         
         if ($my_Insert_Statement->execute()) {
             echo "Cadastrado com sucesso.";
-            header('location: index.html');
+            $contaAcidente++;
           } else {
             echo "Não foi possivel";
           }
@@ -60,6 +64,7 @@ if($valor2){
             
             if ($my_Insert_Statement->execute()) {
                 echo "Cadastrado com sucesso.";
+                $contaBuraco;
                 header('location: index.html');
               } else {
                 echo "Não foi possivel";
@@ -67,5 +72,6 @@ if($valor2){
             
             }
             
+
 
 ?>
