@@ -20,7 +20,7 @@ $my_Insert_Statement->bindParam(':endereco', $valor);
 
 if ($my_Insert_Statement->execute()) {
     echo "Cadastrado com sucesso.";
-    $contaAcidente++;
+    //$contaAcidente++;
     header('location: index.html');
   } else {
     echo "Não foi possivel";
@@ -29,13 +29,13 @@ if ($my_Insert_Statement->execute()) {
 
 if($valor2){
 
-    $my_Insert_Statement = $conn->prepare("INSERT INTO acidente (endereco) VALUES (:endereco )");
+    $my_Insert_Statement = $conn->prepare("INSERT INTO enderecoalagamento (endereco) VALUES (:endereco )");
     
     $my_Insert_Statement->bindParam(':endereco', $valor2);
     
     if ($my_Insert_Statement->execute()) {
         echo "Cadastrado com sucesso.";
-        $contaAlaga++;
+      //  $contaAlaga++;
         header('location: index.html');
       } else {
         echo "Não foi possivel";
@@ -44,13 +44,14 @@ if($valor2){
     }
 
     if($valor3){
-        $my_Insert_Statement = $conn->prepare("INSERT INTO enderecoalagamento (endereco) VALUES (:endereco )");
+        $my_Insert_Statement = $conn->prepare("INSERT INTO acidente (endereco) VALUES (:endereco )");
         
         $my_Insert_Statement->bindParam(':endereco', $valor3);
         
         if ($my_Insert_Statement->execute()) {
             echo "Cadastrado com sucesso.";
-            $contaAcidente++;
+         //   $contaAcidente++;
+         header('location: index.html');
           } else {
             echo "Não foi possivel";
           }
@@ -64,7 +65,7 @@ if($valor2){
             
             if ($my_Insert_Statement->execute()) {
                 echo "Cadastrado com sucesso.";
-                $contaBuraco;
+              //  $contaBuraco;
                 header('location: index.html');
               } else {
                 echo "Não foi possivel";

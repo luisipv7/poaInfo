@@ -38,7 +38,7 @@ session_start();
         <!--<img class="mb-4" src="" href="" alt="" width="72" height="72">-->
         <h1 class="h3 mb-3 font-weight-normal" id="blacktext">Insira o endereço:</h1>
         <label for="input" class="sr-only"></label>
-        <input type="text" id="autocomplete" onFocus="geolocate()" name="enderecoassalto" class="form-control" placeholder="Rua./AV. João das Neves" required >
+        <input type="text" id="autocomplete" onFocus="geolocate()" name="enderecoalagamento" class="form-control" placeholder="Rua./AV. João das Neves" required >
         <div class="checkbox mb-3">
             <label>
          
