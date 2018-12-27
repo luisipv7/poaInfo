@@ -27,15 +27,30 @@ $contaAlaga=0;
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar  navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.html">INFOPOA</a>
+<div>
+<ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link disabled" ><p id="name"></p> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" ><p id="state"></p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"><p id="temperature"></p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"><p id="date"></p></a>
+        </li>
+</ul>
+</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    </nav>
-
 </header>
+</nav>
+   
 <!--########################################################################################################################################--->
 
 
@@ -154,10 +169,11 @@ $contaAlaga=0;
     </table>
 
     <div id="piechart_3d"  style="opacity: 0.8;"></div>
-    <div id=""></div>
+  
+
 
   </div>
-          
+         
         
 
 <!--###################################################################################################################--->
@@ -177,16 +193,16 @@ anHttpRequest.open( "GET", aUrl, true );
 anHttpRequest.send( null ); 
 }
 }
-var theurl='http://apiadvisor.climatempo.com.br/api/v1/weather/locale/3477/current?token=3d502c0a27d51225f145ee0cbd25dd88';
+var theurl='http://apiadvisor.climatempo.com.br/api/v1/weather/locale/5557/current?token=3d502c0a27d51225f145ee0cbd25dd88';
 var client = new HttpClient();
 client.get(theurl, function(response) { 
 var response1 = JSON.parse(response);
 // alert(response);
-document.getElementById("condition").innerHTML = response1.data.condition
-/*document.getElementById("statusCode").innerHTML = response1.statusCode;
-document.getElementById("statusMessage").innerHTML = response1.statusMessage;
-document.getElementById("ipAddress").innerHTML = response1.ipAddress;
-document.getElementById("countryCode").innerHTML = response1.countryCode;
+document.getElementById("name").innerHTML = response1.name;
+document.getElementById("state").innerHTML = response1.state;
+document.getElementById("temperature").innerHTML = response1.data.temperature +"°";
+document.getElementById("date").innerHTML = response1.data.date
+/*document.getElementById("countryCode").innerHTML = response1.countryCode;
 document.getElementById("countryName").innerHTML = response1.countryName;
 document.getElementById("regionName").innerHTML = response1.regionName;
 document.getElementById("cityName").innerHTML = response1.cityName;
@@ -221,8 +237,7 @@ document.getElementById("latitude").innerHTML = response1.latitude;*/
       }
     </script>
 
-    axios.get('http://apiadvisor.climatempo.com.br/api/v1/weather/locale/5557/current?token=3d502c0a27d51225f145ee0cbd25dd88').then(function(response){
-    console.log(response.data); 
+    
 }); 
 
 
